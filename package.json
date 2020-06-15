@@ -1,0 +1,35 @@
+{
+  "name": "notes_react",
+  "private": true,
+  "scripts": {
+    "start": "npm run watch:css && meteor run",
+    "test": "meteor test --once --driver-package meteortesting:mocha",
+    "test-app": "TEST_WATCH=1 meteor test --full-app --driver-package meteortesting:mocha",
+    "visualize": "meteor --production --extra-packages bundle-visualizer",
+    "build:css": "postcss client/assets/tailwind.css -o client/main.css",
+    "watch:css": "postcss client/assets/tailwind.css -o client/main.css"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.8.4",
+    "bcrypt": "^5.0.0",
+    "bcryptjs": "^2.4.3",
+    "meteor-node-stubs": "^1.0.0",
+    "react": "^16.13.0",
+    "react-addons-pure-render-mixin": "^15.6.2",
+    "react-dom": "^16.13.0",
+    "react-router": "^5.2.0",
+    "react-router-dom": "^5.2.0"
+  },
+  "meteor": {
+    "mainModule": {
+      "client": "client/main.jsx",
+      "server": "server/main.js"
+    },
+    "testModule": "tests/main.js"
+  },
+  "devDependencies": {
+    "autoprefixer": "^9.8.0",
+    "postcss-cli": "^7.1.1",
+    "tailwindcss": "^1.4.6"
+  }
+}
