@@ -86921,3 +86921,7 @@ video {
     transition-delay: 1000ms;
   }
 }
+.ck-editor__editable {
+  min-height: 300px;
+}
+

@@ -37,9 +37,7 @@ const Login = (props) => {
     Meteor.loginWithPassword(email, pw, (err) => {
       if (err) {
         setAlert('red', err.reason);
-        setTimeout(() => {
-          removeAlert();
-        }, 3000);
+        removeAlert();
       } else {
         props.history.push('/?ref=dsalkjfAsdaf3ojl');
       }

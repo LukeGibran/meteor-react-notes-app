@@ -23,9 +23,11 @@ const AlertState = (props) => {
 
   // Remove Alert
   const removeAlert = () => {
-    dispatch({
-      type: REMOVE_ALERT,
-    });
+    setTimeout(() => {
+      dispatch({
+        type: REMOVE_ALERT,
+      });
+    }, 3000);
   };
 
   return (

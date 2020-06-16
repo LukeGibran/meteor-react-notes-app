@@ -18,7 +18,7 @@ const Register = (props) => {
   }, []);
   const alertContext = useContext(AlertContext);
 
-  const { setAlert, removeAlert, show, color, message } = alertContext;
+  const { setAlert, show, color, message } = alertContext;
 
   const [user, setUser] = useState({
     fullname: '',

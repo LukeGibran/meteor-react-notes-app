@@ -11,7 +11,7 @@ import Sidebar from '../layouts/Sidebar';
 import Alert from '../layouts/Alert';
 
 // Notes
-import Notes from '../Notes/Notes';
+import NotesIndex from '../Notes/NotesIndex';
 
 const Home = (props) => {
   const alertContext = useContext(AlertContext);
@@ -44,9 +44,7 @@ const Home = (props) => {
       setAlert('green', `Welcome! ${name} 👋`);
     }
 
-    setTimeout(() => {
-      removeAlert();
-    }, 3500);
+    removeAlert();
   }, []);
 
   // Set the user
@@ -73,7 +71,7 @@ const Home = (props) => {
 
       <div className="w-full md:w-5/6  p-4 text-center text-gray-700">
         {show && <Alert color={color} message={message} />}
-        <Notes />
+        <NotesIndex />
       </div>
     </div>
   );

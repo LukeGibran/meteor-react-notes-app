@@ -11,6 +11,8 @@
   },
   "dependencies": {
     "@babel/runtime": "^7.8.4",
+    "@ckeditor/ckeditor5-build-classic": "^19.0.2",
+    "@ckeditor/ckeditor5-react": "^2.1.0",
     "bcrypt": "^5.0.0",
     "bcryptjs": "^2.4.3",
     "meteor-node-stubs": "^1.0.0",

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
-const listNotes = (props) => {
+const listNotes = ({ name, description }) => {
   return (
     <Fragment>
       <div className="p-4 md:w-1/3">
@@ -21,15 +22,12 @@ const listNotes = (props) => {
             </div>
 
             <h2 className="text-gray-900 text-lg title-font font-medium">
-              Neptune
+              {name}
             </h2>
           </div>
 
           <div className="flex-grow">
-            <p className="leading-relaxed text-base">
-              Blue bottle crucifix vinyl post-ironic four dollar toast vegan
-              taxidermy. Gastropub indxgo juice poutine.
-            </p>
+            <p className="leading-relaxed text-base">{description}</p>
 
             <a className="mt-3 text-indigo-500 inline-flex items-center">
               Learn More
@@ -55,4 +53,8 @@ const listNotes = (props) => {
   );
 };
 
+listNotes.propTypes = {
+  name: PropTypes.string.isRequired,
+  description: PropTypes.string.isRequired,
+};
 export default listNotes;
