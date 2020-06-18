@@ -2,7 +2,7 @@ import React, { Fragment, useState } from 'react';
 import AddNotes from '../Notes/addNotes';
 
 // Components
-import Notes from './Notes';
+import Notes from './Notes.jsx';
 
 const NotesIndex = (props) => {
   const [displayMain, toggleDisplay] = useState(true);

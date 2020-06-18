@@ -70,6 +70,7 @@ const addNotes = ({ toggleDisplay }) => {
           placeholder="Description"
           onChange={setDescription}
           value={description}
+          maxLength="30"
         ></textarea>
 
         {/*	       <CKEditor

@@ -1,6 +1,7 @@
 import React, { Fragment } from 'react';
+import PropTypes from 'prop-types';
 
-const SearchNotes = (props) => {
+const SearchNotes = ({ search }) => {
   return (
     <Fragment>
       <input
@@ -8,6 +9,7 @@ const SearchNotes = (props) => {
         type="text"
         placeholder="Search Notes"
         aria-label="Full name"
+        onChange={search}
       />
 
       <div className="text-blue ">
@@ -26,6 +28,10 @@ const SearchNotes = (props) => {
       </div>
     </Fragment>
   );
+};
+
+SearchNotes.propTypes = {
+  search: PropTypes.func.isRequired,
 };
 
 export default SearchNotes;
